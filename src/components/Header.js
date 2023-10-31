@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logotype from '../assets/images/logotye.svg';
 import Button from './generics/Button';
+import { useLocation, NavLink } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header>
       <div className="container">
-        <img src={Logotype} alt="Crito logotype" />
-        <button className="menu-bars">
+        <a href='/'>
+          <img src={Logotype} alt="Crito logotype" />
+        </a>
+        <button id='headerMenuBtn' className="menu-bars">
           <i className="fa-solid fa-bars" />
         </button>
         <div className="menu-desktop">
@@ -59,12 +65,10 @@ const Header = () => {
           </div>
           <div className="menu-desktop-bottom">
             <nav>
-              <a className="active" href="/home">Home</a>
-              <a href="/home">Service</a>
-              <a href="/home">News</a>
-              <a href="/home">
-                Contact
-              </a>
+              <NavLink exact to="/" activeClassName="active">Home</NavLink>
+              <NavLink to="/service" activeClassName="active">Service</NavLink>
+              <NavLink to="/news" activeClassName="active">News</NavLink>
+              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </nav>
             <Button type="btn-theme" title="Log in" url="/login" />
           </div>
