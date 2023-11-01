@@ -890,7 +890,7 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
 }
 .blog-section .article-cards .article-wrapper {
   max-width: 420px;
-  height: 395px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -910,7 +910,7 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
   border-radius: 0.5rem;
   object-fit: fill;
   width: 100%;
-  height: 200px;
+  height: 305px;
 }
 .blog-section .article-cards .article-wrapper .background-img .date {
   position: absolute;
@@ -997,6 +997,7 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
   border-radius: 10rem;
   border: none;
   margin-right: 0.5rem;
+  max-width: 200px;
 }
 .newsletter-signup .newsletter-wrapper .mail-and-btn a {
   text-align: center;

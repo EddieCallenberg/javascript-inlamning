@@ -6,7 +6,6 @@ const BlogSection = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-      // Hämta data från API:et när komponenten monteras
       fetch('https://win23-assignment.azurewebsites.net/api/articles')
         .then((response) => response.json())
         .then((data) => setArticles(data));

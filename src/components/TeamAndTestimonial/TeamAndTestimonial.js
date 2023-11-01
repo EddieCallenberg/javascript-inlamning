@@ -9,6 +9,7 @@ import Cassandra from '../../assets/images/cassandra-warren.png'
 import Amanda from '../../assets/images/amanda-tulling.png'
 import Jack from '../../assets/images/jack-mc.png'
 import ReviewsCard from './ReviewsCard'
+import SectionTitle from '../generics/SectionTitle'
 
 const TeamAndTestimonial = () => {
 
@@ -52,8 +53,7 @@ const TeamAndTestimonial = () => {
         </div>
         <div className="container">
           <div className="testimonial-wrapper">
-            <h2>Testimonial</h2>
-            <h3>what Our Clients Say</h3>
+            <SectionTitle title="Testimonial" description="what Our Clients Say" />
             <div className="reviews-wrapper">
               {
                 reviewers.map((reviewer, index) => (
