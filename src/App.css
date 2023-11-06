@@ -1224,7 +1224,14 @@ footer .footer-cosmetic {
 }
 
 .contact-map {
+  background-image: url("assets/images/crito-contact-map.png");
   height: 620px;
   background-position: center;
   background-size: cover;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }

@@ -65,10 +65,10 @@ const Header = () => {
           </div>
           <div className="menu-desktop-bottom">
             <nav>
-              <NavLink exact to="/" activeClassName="active">Home</NavLink>
-              <NavLink to="/service" activeClassName="active">Service</NavLink>
-              <NavLink to="/news" activeClassName="active">News</NavLink>
-              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+              <NavLink exact to="/" activeclassname="active">Home</NavLink>
+              <NavLink to="/service" activeclassname="active">Service</NavLink>
+              <NavLink to="/news" activeclassname="active">News</NavLink>
+              <NavLink to="/contact" activeclassname="active">Contact</NavLink>
             </nav>
             <Button type="btn-theme" title="Log in" url="/login" />
           </div>

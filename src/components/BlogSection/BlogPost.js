@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const BlogPost = ({ articleId, imgUrl, publishedDate, category, title, content }) => {
   return (
     <div className="article-wrapper">
-      <Link to={`/news/${articleId}`}>
+      <Link to={`/${articleId}`}>
         <div className="background-img">
           <img src={imgUrl} alt={`Picture for ${title}`} />
           <div className="date">
