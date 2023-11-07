@@ -7,21 +7,29 @@ function ArticleDetail() {
 
   useEffect(() => {
     fetch(`https://win23-assignment.azurewebsites.net/api/articles/${articleId}`)
-      .then((response) => response.json())
+      .then((response) => response.text())
       .then((data) => {
-        setArticleData(data);
+        const articleDataObject = JSON.parse(data);
+        setArticleData(articleDataObject);
       })
       .catch((error) => {
         console.error('Fel vid hämtning av artikeldata:', error);
       });
   }, [articleId]);
+  console.log(articleData)
 
   return (
     <div>
-      <h2>Artikel: {articleId}</h2>
-      <p>Titel: {articleData.title}</p>
-      <p>Innehåll: {articleData.content}</p>
-      {/* Visa andra artikeldata här */}
+      <h2>{articleData.title}</h2>
+      <div className='date-category-author'>
+        <p>{articleData.published}</p>
+        <p>{articleData.category}</p>
+        <p>{articleData.author}</p>
+      </div>
+      <img src={articleData.imageUrl} />
+      <div>
+        <p className='nd-article-content'>{articleData.content}</p>
+      </div>
     </div>
   );
 }
