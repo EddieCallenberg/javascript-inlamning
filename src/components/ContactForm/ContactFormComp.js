@@ -12,25 +12,25 @@ const ContactFormComp = () => {
     e.preventDefault();
     console.log('handleSubmit körs');
   
-    // RegEx-mönster för validering
+    // RegEx för validering
     const namePattern = /.{2,}/;
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const messagePattern = /.+/;
   
-    // Kontrollera om formuläret är giltigt
+ 
     if (!namePattern.test(formData.name)) {
       alert('Namn måste innehålla minst två tecken');
-      return; // Avbryt om namnet är ogiltigt
+      return;
     }
   
     if (!emailPattern.test(formData.email)) {
       alert('E-postadressen är ogiltig');
-      return; // Avbryt om e-postadressen är ogiltig
+      return;
     }
   
     if (!messagePattern.test(formData.message)) {
       alert('Meddelandet måste innehålla minst ett tecken');
-      return; // Avbryt om meddelandet är ogiltigt
+      return; 
     }
   
     try {
@@ -48,11 +48,9 @@ const ContactFormComp = () => {
         alert('Formuläret skickades!');
       } else {
         console.error('Fel vid API-anrop:', response.statusText);
-        // Lägg till felhantering här om det behövs
       }
     } catch (error) {
       console.error('Nätverksfel:', error);
-      // Lägg till felhantering här om det behövs
     }
   };
   

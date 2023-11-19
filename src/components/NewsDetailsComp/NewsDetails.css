@@ -115,17 +115,17 @@ h5 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-weight: 700;
-    text-decoration: none; /* Ta bort standard understrykning */
+    text-decoration: none;
   }
   
   h5::before {
     content: '';
     position: absolute;
-    left: 0; /* Avstånd från vänsterkanten */
-    bottom: 0; /* Placera understrykningen nederst */
-    width: 2rem; /* Bredd på understrykningen */
-    height: 2px; /* Höjd på understrykningen */
-    background-color: #191919; /* Färg på understrykningen */
+    left: 0; 
+    bottom: 0; 
+    width: 2rem;
+    height: 2px; 
+    background-color: #191919;
   }
 
   .categories-links {
