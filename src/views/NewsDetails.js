@@ -1,14 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
-import ArticleDetail from '../components/NewsDetailsComp/ArticleDetail'
+import NewsDetailsBody from '../components/NewsDetailsComp/NewsDetailsBody'
+import NewsDetailsSlider from '../components/NewsDetailsSlider/NewsDetailsSlider'
 
 const NewsDetails = () => {
   return (
     <>
     <Header />
     <main>
-    <ArticleDetail />
+    <NewsDetailsBody />
+    <NewsDetailsSlider />
     </main>
     <Footer />
     </>

@@ -1,0 +1,17 @@
+.section-title-title {
+    font-size: 1.1rem;
+    color: #F94D1C;
+}
+
+.section-title-desc {
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+.slider-title-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
